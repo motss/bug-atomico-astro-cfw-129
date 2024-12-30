@@ -1,0 +1,42 @@
+{
+  "name": "test-astro-ts",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "biome.check": "biome check --write",
+    "biome.ci": "biome ci",
+    "biome.clean": "biome clean",
+    "build": "astro check && astro build --experimental-integrations",
+    "cf.typegen": "wrangler types",
+    "check": "astro check",
+    "clean": "rm -rf .astro .wrangler dist",
+    "dev": "astro dev --experimental-integrations",
+    "lint": "eslint --color --debug --stats",
+    "pages.deploy": "pnpm run build && wrangler pages deploy",
+    "pages.preview": "pnpm run build && wrangler pages dev",
+    "preview": "pnpm run build && wrangler pages dev",
+    "start": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.1.0",
+    "@atomico/hooks": "^4.4.1",
+    "astro": "^5.1.1",
+    "atomico": "^1.79.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@atomico/astro": "^0.9.1",
+    "@biomejs/biome": "^1.9.4",
+    "@cloudflare/workers-types": "^4.20241224.0",
+    "lightningcss": "^1.28.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "wrangler": "^3.99.0"
+  },
+  "packageManager": "pnpm@9.15.2",
+  "engines": {
+    "node": "23.5.0",
+    "pnpm": "9.15.2"
+  }
+}

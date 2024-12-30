@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "jsx": "react-jsxdev",
+    "jsxImportSource": "atomico",
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "components:*": ["./src/components/*"],
+      "islands:*": ["./src/islands/*"],
+      "layouts:*": ["./src/layouts/*"]
+    },
+    "types": ["@cloudflare/workers-types/2023-07-01"]
+  },
+  "exclude": [".astro", ".turbo", ".wrangler", "dist"]
+}
